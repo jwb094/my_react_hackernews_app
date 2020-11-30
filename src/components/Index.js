@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-//import List from  '../components/list';
+import List from  '../components/list';
 class Index extends Component {
     constructor(props) {
         super(props);
@@ -45,9 +45,9 @@ class Index extends Component {
        //const er = fetch(`https://hacker-news.firebaseio.com/v0/item/25190970.json?print=pretty`);
        // console.log(er);
         
-       
-        news_.forEach(item   =>  {
-            let promises = [];
+       let promises = [];
+     //   let s = news_.forEach(item   =>  {
+      news_.forEach(item   =>  {     
             //console.log(i);
            // promises.push(fetch(`https://hacker-news.firebaseio.com/v0/item/${item}.json?print=pretty`)
           
@@ -62,6 +62,7 @@ class Index extends Component {
   
         })
         console.log(promiseArray);
+        //console.log(s);
         // news_.forEach(item => {
         //     fetch(`https://hacker-news.firebaseio.com/v0/item/${item}.json?print=pretty`)
         //     .then(result => result.json())
@@ -69,14 +70,20 @@ class Index extends Component {
         //        // console.log(response.json);
         //         promiseArray.push(result.json());
         //       }) 
+        /**
+         *       <ul> {news__.map((item) =>
+                <li>{item}</li>)}
+                </ul>   
+  
+         */
         // });
        // Promise.all(promiseArray);
         console.log(promiseArray);
         return(
-              <ul> {news__.map((item) =>
-                <li>{item}</li>
-            )}</ul>
-  
+           
+              <List list={promiseArray}/>
+            
+       
         )
     }
 }

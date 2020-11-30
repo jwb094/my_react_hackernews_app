@@ -1,30 +1,27 @@
 import React from 'react';
-                {/* <li className="list-group-item" onClick={() => selected(video)}>
-                    <div className="col-sm-12">
-                        <img src= {video.snippet.thumbnails.default.url}></img>
-                        
-                    </div>
-                    <div className="col-sm-12">
-                        {video.snippet.title}
-                    </div>
-                
-             
-             
-                </li> */}
 const List = ({list}) => {
-
 console.log(list);
-    const renderlist = list.map((item) => { 
-    let data;
-        const result = fetch(`https://hacker-news.firebaseio.com/v0/item/${item}.json?print=pretty`)
-        .then(result => result.json())
-        .then(data => }));
-        console.log(data);
+const renderlist = list.map((key,item) => { 
+    console.log(key);
+});
+   // const renderlist = list.map((key,item) => { 
+    //const renderlist = Object.entries(list).map((key,k)=> {  
+       
+        return (
+             <ul>
+             {list.map((item, index) => (
+               <li>
+                <h5>{item.title}</h5>
+                <p>{item.time}</p>
+               </li>
+              ))}
+             </ul>
+         
+       )
 
-
-    });
-      return renderlist;
+    //});
+    //  return renderlist;
 };
-
+//<li>{key}{item} </li>
 export default List;
 
