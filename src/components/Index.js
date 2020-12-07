@@ -17,7 +17,7 @@ class Index extends Component {
      const result = fetch("https://hacker-news.firebaseio.com/v0/newstories.json?print=pretty")
      .then(result => result.json())
      .then(result => {
-     //  console.log(result)
+      //console.log(result)
        this.setState({
            news:result
        })
@@ -29,7 +29,7 @@ class Index extends Component {
     //  console.log(item)
     // );
     // console.log(items);
-     //console.log(this.state.news);
+     console.log(this.state.news);
     }
 
     // componentMountfetchnewsdata() {
@@ -39,13 +39,14 @@ class Index extends Component {
     //   }
 
     render() {
+        this.state.news = this.state.news.slice(1,100);
         let news_ = this.state.news;
-        let news__ = this.state.news;
+        //let news__ = this.state.news;
         let promiseArray = [];
        //const er = fetch(`https://hacker-news.firebaseio.com/v0/item/25190970.json?print=pretty`);
        // console.log(er);
         
-       let promises = [];
+       //let promises = [];
      //   let s = news_.forEach(item   =>  {
       news_.forEach(item   =>  {     
             //console.log(i);
@@ -61,6 +62,7 @@ class Index extends Component {
             })
   
         })
+        //promiseArray = promiseArray.slice(0,100);
         console.log(promiseArray);
         //console.log(s);
         // news_.forEach(item => {

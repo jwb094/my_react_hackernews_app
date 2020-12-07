@@ -1,18 +1,19 @@
 import React from 'react';
+import moment from 'moment';
 const List = ({list}) => {
 console.log(list);
-const renderlist = list.map((key,item) => { 
-    console.log(key);
-});
-   // const renderlist = list.map((key,item) => { 
-    //const renderlist = Object.entries(list).map((key,k)=> {  
+// const renderlist = list.map((key,item) => { 
+//     console.log(key);
+// });
+   // const renderlist =sss list.map((key,item) => { 
+    //const renderlist = Objssect.entries(list).map((key,k)=> {  
        
         return (
-             <ul>
+             <ul id="list">
              {list.map((item, index) => (
-               <li>
-                <h5>{item.title}</h5>
-                <p>{item.time}</p>
+               <li> 
+                <h5>{index+1}. <a href={item.url}>{item.title}</a></h5>
+                <p className="secondary_info"> {moment(item.time).format("MMM Do YY")} <a href="#">hide</a>  {item.descendants} comments</p>
                </li>
               ))}
              </ul>
