@@ -49,6 +49,7 @@
 ul#list li{
   list-style-type: none;
 }
+#title{ text-decoration: none;}
 
 .secondary_info{
   margin-left: 20px;

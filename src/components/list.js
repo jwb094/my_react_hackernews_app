@@ -1,5 +1,5 @@
 import React from 'react';
-import moment from 'moment';
+//import moment from 'moment';
 const List = ({list}) => {
 console.log(list);
 // const renderlist = list.map((key,item) => { 
@@ -13,7 +13,7 @@ console.log(list);
              {list.map((item, index) => (
                <li> 
                 <h5>{index+1}. <a href={item.url}>{item.title}</a></h5>
-                <p className="secondary_info"> {moment(item.time).format("MMM Do YY")} <a href="#">hide</a>  {item.descendants} comments</p>
+                <p className="secondary_info">  <a href="#">hide</a>  {item.descendants} comments</p>
                </li>
               ))}
              </ul>

@@ -62,7 +62,7 @@ class Index extends Component {
             })
   
         })
-        //promiseArray = promiseArray.slice(0,100);
+        promiseArray = promiseArray.slice(0,100);
         console.log(promiseArray);
         //console.log(s);
         // news_.forEach(item => {
