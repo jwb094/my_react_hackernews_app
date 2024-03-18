@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import MainPage from "./components/Index";
+import PastPage from "./components/Index";
 import './App.css';
 
 import {
@@ -45,6 +46,7 @@ function App() {
       
 <Switch>
         <Route path="/" component={MainPage} />
+        <Route path="/past" component={PastPage} />
        
       
        

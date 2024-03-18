@@ -12,7 +12,7 @@ console.log(list);
              <ul id="list">
              {list.map((item, index) => (
                <li> 
-                <h5>{index+1}. <a href={item.url}>{item.title}</a></h5>
+                <h5>{index+1}. <a id="title" href={item.url}>{item.title}</a></h5>
                 <p className="secondary_info">  <a href="#">hide</a>  {item.descendants} comments</p>
                </li>
               ))}
